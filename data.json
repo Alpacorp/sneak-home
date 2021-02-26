@@ -3,7 +3,7 @@
     {
         "id": 1,
         "category": "Branding",
-        "image": "http://localhost:7000/assets/ads-instagram.jpeg",
+        "image": "./assets/ads-instagram.jpeg",
         "title": "Programmatic",
         "description": "smart traffiquer ads and optimization"
     },
