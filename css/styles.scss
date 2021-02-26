@@ -7,22 +7,26 @@
     box-sizing: border-box;
 }
 
+*::selection{
+    background-color: #c2c2c2;
+}
+
 body {
     margin: 10px 0;
     font-family: $questrial;
-    scrollbar-face-color:fuchsia;
+    scrollbar-face-color: fuchsia;
 }
 
 ::-webkit-scrollbar {
     width: 6px;
 }
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px $magenta; 
+    -webkit-box-shadow: inset 0 0 6px $magenta;
     border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 5px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 .header {
@@ -65,7 +69,7 @@ body {
             padding: 10px 30px;
             border-radius: 3px;
             letter-spacing: 2px;
-            &.filter:hover {
+            &.filters:hover {
                 background-color: $magenta;
                 color: $white;
                 transition: 0.3s;
@@ -114,6 +118,7 @@ body {
             font-size: 12px;
             cursor: pointer;
             border-radius: 3px;
+            outline: none;
         }
         & button:hover {
             transform: scale(1.1);
@@ -143,7 +148,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        & div {
+        & h3 {
             margin: 0 10px;
             color: $grayLight;
             padding: 10px 30px;
@@ -152,7 +157,7 @@ body {
             font-size: 12px;
             cursor: pointer;
         }
-        & div:hover {
+        & h3:hover {
             background-color: $magenta;
             color: $white;
             transition: 0.3s;
@@ -160,19 +165,20 @@ body {
     }
 }
 
+.selected {
+    background-color: $magenta;
+    color: $white !important;
+}
+
 .filtered {
     background-color: $magenta;
     color: $white;
-    // margin: 0 10px;
-    // color: $grayLight;
     padding: 10px 30px;
     border-radius: 3px;
     letter-spacing: 2px;
-    // font-size: 12px;
-    // cursor: pointer;
 }
 
-a{
+a {
     text-decoration: none;
     color: $grayLight;
 }
@@ -184,47 +190,59 @@ a{
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-evenly;
-        & .canva-img {
-            margin: 10px 0;
-            max-width: 400px;
+        & .canva-grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
             width: 100%;
-            height: 400px;
-            padding: 10px;
-            background-color: #ebe7e7;
-            background-image: url('/assets/project-photo.jpg');
-            & .info {
-                text-align: center;
-                padding-top: 140px;
-                & .title {
-                    margin: 0 auto 20px 0;
-                    font-size: 30px;
-                }
-                & .description {
-                    margin: 20px 0;
-                    font-size: 20px;
-                }
-                & hr {
-                    height: 2px;
-                    border: none;
-                    background-color: #ffffff;
-                    width: 50%;
-                    margin: auto;
-                }
-            }
-            &:hover {
-                transition: 3s;
-                cursor: pointer;
-            }
-            &:hover .info {
-                display: block;
-            }
-            & .info {
-                transition: 3s;
-                color: $white;
-                display: none;
-                background-color: #f98094af;
+            transition: 3s;
+            & .canva-img {
+                margin: 10px 0;
+                max-width: 400px;
                 width: 100%;
-                height: 380px;
+                height: 400px;
+                padding: 10px;
+                object-fit: cover;
+                object-position: center 25%;
+                background-color: #ebe7e7;
+                background-image: url('../assets/project-photo.jpg');
+                & .info {
+                    text-align: center;
+                    padding-top: 140px;
+                    & .title {
+                        margin: 0 auto 20px 0;
+                        font-size: 30px;
+                        color: #ffffff;
+                    }
+                    & .description {
+                        margin: 20px 0;
+                        font-size: 20px;
+                        color: #ffffff;
+                    }
+                    & hr {
+                        height: 2px;
+                        border: none;
+                        background-color: #ffffff;
+                        width: 50%;
+                        margin: auto;
+                    }
+                }
+                &:hover {
+                    transition: 3s;
+                    cursor: pointer;
+                }
+                &:hover .info {
+                    display: block;
+                }
+                & .info {
+                    transition: 3s;
+                    color: $white;
+                    display: none;
+                    background-color: #f98094af;
+                    width: 100%;
+                    height: 380px;
+                }
             }
         }
     }
@@ -240,6 +258,7 @@ a{
         cursor: pointer;
         border-radius: 3px;
         background-color: $magenta;
+        outline: none;
         &:hover {
             transform: scale(1.1);
             transition: 0.5s;
@@ -267,6 +286,132 @@ a{
             cursor: pointer;
             &:hover {
                 transform: scale(1.2)
+            }
+        }
+    }
+}
+
+.menu {
+    display: none;
+}
+
+.no-active {
+    left: -100vw;
+}
+
+// Media queries
+
+@media screen and(min-width: 1600px) {
+    .projects {
+        & .projects__canva {
+            & .canva-img {
+                max-width: 500px;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 1000px) {
+    .header {
+        margin: 40px;
+        & .header__nav {
+            & nav ul li {
+                padding: 10px;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 850px) {
+    .header {
+        & .header__nav {
+            width: 100%;
+            & nav ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 100vw;
+                margin: auto;
+                font-size: 40px;
+                background-color: #f7f5f58c;
+                transition: 1s;
+            }
+            .no-active {
+                left: -100vw;
+            }
+            & .nav-search {
+                display: none;
+            }
+        }
+        & .menu {
+            display: block;
+            cursor: pointer;
+            z-index: 5;
+            position: fixed;
+            right: 25px;
+            & i img {
+                max-width: 30px;
+                width: 100%;
+                height: 30px;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 750px) {
+    .hero {
+        padding: 80px 100px;
+    }
+}
+
+@media screen and(max-width: 662px) {
+    .categories__filter h3 {
+        padding: 10px;
+    }
+}
+
+@media screen and(max-width: 450px) {
+    .header {
+        margin: 30px;
+    }
+    .hero {
+        padding: 50px 10px;
+    }
+    .filter {
+        margin: 20px 0;
+    }
+    .categories {
+        margin: 5px 0;
+        & .categories__filter {
+            display: block;
+            & h3 {
+                text-align: center;
+                padding: 10px 5px;
+                width: 30%;
+                margin: auto;
+            }
+        }
+    }
+    .projects {
+        margin: 10px 0;
+        &__canva {
+            margin: auto;
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            & .canva-grid{
+                & .canva-img{
+                    & .info{
+                        & .title{
+                            font-size: 25px;
+                        }
+                    }
+                }
             }
         }
     }
