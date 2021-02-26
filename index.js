@@ -190,7 +190,8 @@ const filtros = async function () {
     gridCanva.forEach(canva => canva.remove());
 
     let cate = this.innerText;
-    let res = await fetch('http://localhost:7000/data.json');
+    // let res = await fetch('http://localhost:7000/data.json');
+    let res = await fetch('https://sneak-brown.vercel.app/data.json');
     let json = await res.json();
 
     let filter;
