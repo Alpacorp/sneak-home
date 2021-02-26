@@ -64,14 +64,24 @@ body {
         list-style: none;
         & li {
             margin: 0 5px;
-            color: $grayText;
-            cursor: pointer;
-            padding: 10px 30px;
-            border-radius: 3px;
-            letter-spacing: 2px;
-            &.filters:hover {
+            // color: $grayText;
+            // cursor: pointer;
+            // padding: 10px 30px;
+            // border-radius: 3px;
+            // letter-spacing: 2px;
+            & a {
+                // padding: 20px 50px;
+                // margin: 0 10px;
+                color: $grayLight;
+                padding: 10px 30px;
+                border-radius: 3px;
+                letter-spacing: 2px;
+                font-size: 17px;
+                cursor: pointer;
+            }
+            &.navFilter:hover a {
                 background-color: $magenta;
-                color: $white;
+                color: #ffffff;
                 transition: 0.3s;
             }
             & img {
@@ -111,14 +121,17 @@ body {
     & .area-button {
         margin: 30px;
         & button {
-            padding: 15px 30px;
+            padding: 12px 0;
             border: none;
-            color: $magentaText;
             text-transform: uppercase;
             font-size: 12px;
             cursor: pointer;
-            border-radius: 3px;
+            border-radius: 2px;
             outline: none;
+            & a {
+                color: $magentaText;
+                padding: 15px 30px;
+            }
         }
         & button:hover {
             transform: scale(1.1);
@@ -292,6 +305,10 @@ a {
 }
 
 .menu {
+    display: none;
+}
+
+.hidden {
     display: none;
 }
 

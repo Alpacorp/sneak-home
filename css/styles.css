@@ -92,16 +92,20 @@ body {
 
 .header__nav nav ul li {
   margin: 0 5px;
-  color: #707070;
-  cursor: pointer;
+}
+
+.header__nav nav ul li a {
+  color: #8f8c8c;
   padding: 10px 30px;
   border-radius: 3px;
   letter-spacing: 2px;
+  font-size: 17px;
+  cursor: pointer;
 }
 
-.header__nav nav ul li.filters:hover {
+.header__nav nav ul li.navFilter:hover a {
   background-color: #f98094;
-  color: #f7f5f5;
+  color: #ffffff;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -152,14 +156,18 @@ body {
 }
 
 .hero .area-button button {
-  padding: 15px 30px;
+  padding: 12px 0;
   border: none;
-  color: #ff5672;
   text-transform: uppercase;
   font-size: 12px;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 2px;
   outline: none;
+}
+
+.hero .area-button button a {
+  color: #ff5672;
+  padding: 15px 30px;
 }
 
 .hero .area-button button:hover {
@@ -398,6 +406,10 @@ a {
 }
 
 .menu {
+  display: none;
+}
+
+.hidden {
   display: none;
 }
 
