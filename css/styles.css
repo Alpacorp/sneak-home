@@ -155,22 +155,20 @@ body {
   margin: 30px;
 }
 
-.hero .area-button button {
-  padding: 12px 0;
+.hero .area-button a {
+  color: #ff5672;
+  background-color: #EFEFEF;
+  padding: 15px 30px;
   border: none;
   text-transform: uppercase;
   font-size: 12px;
+  font-weight: bold;
   cursor: pointer;
   border-radius: 2px;
   outline: none;
 }
 
-.hero .area-button button a {
-  color: #ff5672;
-  padding: 15px 30px;
-}
-
-.hero .area-button button:hover {
+.hero .area-button:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: 0.5s;
@@ -427,8 +425,9 @@ a {
   .header {
     margin: 40px;
   }
-  .header .header__nav nav ul li {
+  .header .header__nav nav ul li a {
     padding: 10px;
+    font-size: 30px;
   }
 }
 
