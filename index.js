@@ -136,7 +136,7 @@ const getData = async () => {
 
     try {
 
-        let res = await fetch('http://localhost:7000/data.json');
+        let res = await fetch('https://sneak-brown.vercel.app/data.json');
         let json = await res.json();
 
         const canvaGrid = document.createElement('div');

@@ -48,7 +48,7 @@ body {
   margin: 40px 100px;
 }
 
-.header__brand {
+.header__brand a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
