@@ -10,98 +10,98 @@
     {
         "id": 2,
         "category": "Branding",
-        "image": "http://localhost:7000/assets/table-work.jpeg",
+        "image": "./assets/table-work.jpeg",
         "title": "Smart work",
         "description": "what is not measured is not controlled"
     },
     {
         "id": 3,
         "category": "App",
-        "image": "http://localhost:7000/assets/phone-app.jpeg",
+        "image": "./assets/phone-app.jpeg",
         "title": "Multiplatform Dev App",
         "description": "your idea embodied in an app"
     },
     {
         "id": 4,
         "category": "Photography",
-        "image": "http://localhost:7000/assets/project-photo.jpg",
+        "image": "./assets/project-photo.jpg",
         "title": "Quality",
         "description": "we are artists looking for inspiration"
     },
     {
         "id": 5,
         "category": "App",
-        "image": "http://localhost:7000/assets/multiplatform.jpeg",
+        "image": "./assets/multiplatform.jpeg",
         "title": "Omnichannel",
         "description": "how your clients see you on different platforms"
     },
     {
         "id": 6,
         "category": "Web",
-        "image": "http://localhost:7000/assets/screen-dev.jpeg",
+        "image": "./assets/screen-dev.jpeg",
         "title": "Modern websites",
         "descripton": "more than 50 customers support our work"
     },
     {
         "id": 7,
         "category": "Branding",
-        "image": "http://localhost:7000/assets/branding-foots.jpeg",
+        "image": "./assets/branding-foots.jpeg",
         "title": "Make Your Brand",
         "description": "develop all studies to creation logo and brand"
     },
     {
         "id": 8,
         "category": "Branding",
-        "image": "http://localhost:7000/assets/supreme-brand.jpeg",
+        "image": "./assets/supreme-brand.jpeg",
         "title": "Marketing Level God",
         "description": "your brand in mouth alls"
     },
     {
         "id": 9,
         "category": "Branding",
-        "image": "http://localhost:7000/assets/brand-construction.jpeg",
+        "image": "./assets/brand-construction.jpeg",
         "title": "Brand Construction",
         "description": "we are the best partner"
     },
     {
         "id": 10,
         "category": "Branding",
-        "image": "http://localhost:7000/assets/dolce-gabbana.jpeg",
+        "image": "./assets/dolce-gabbana.jpeg",
         "title": "Brands all the world",
         "description": "all World of possibilities"
     },
     {
         "id": 11,
         "category": "Web",
-        "image": "http://localhost:7000/assets/developer.jpeg",
+        "image": "./assets/developer.jpeg",
         "title": "UX/UI",
         "description": "we optimize flows for your web users"
     },
     {
         "id": 12,
         "category": "Web",
-        "image": "http://localhost:7000/assets/dev-partners.jpeg",
+        "image": "./assets/dev-partners.jpeg",
         "title": "High-level equipment",
         "description": "together we create wonders that we are proud of"
     },
     {
         "id": 13,
         "category": "Web",
-        "image": "http://localhost:7000/assets/dev-stickers.jpeg",
+        "image": "./assets/dev-stickers.jpeg",
         "title": "Agile methodologies",
         "description": "time is a treasure that we take advantage of effectively"
     },
     {
         "id": 14,
         "category": "Photography",
-        "image": "http://localhost:7000/assets/photos.jpeg",
+        "image": "./assets/photos.jpeg",
         "title": "Photo Study",
         "description": "professionals at the service of your brand"
     },
     {
         "id": 15,
         "category": "Photography",
-        "image": "http://localhost:7000/assets/sky.jpeg",
+        "image": "./assets/sky.jpeg",
         "title": "We capture wonders",
         "description": "a studio photo for your brand awaits you"
     }
